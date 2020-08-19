@@ -37,5 +37,10 @@
         android:text="intent隐士  跳第二页"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button6"
+        android:text="intent隐士  打开浏览器"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

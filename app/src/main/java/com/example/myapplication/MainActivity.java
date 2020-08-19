@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         findViewById(R.id.button3).setOnClickListener(this);
         findViewById(R.id.button4).setOnClickListener(this);
         findViewById(R.id.button5).setOnClickListener(this);
-
+        findViewById(R.id.button6).setOnClickListener(this);
 
     }
 
@@ -64,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 break;
             case R.id.button5:
 
+                //隐士跳转的作用 , 可以控制系统的一些其他的程序
                 Toast.makeText(this, "隐士跳转", Toast.LENGTH_LONG).show();
 
                 //隐士他跳转需要action 和 category都匹配中才能跳转 ， 否则会报错
@@ -75,6 +77,14 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 intent2.addCategory("android.intent.action.Second");
 
                 startActivity(intent2);
+                break;
+            case R.id.button6:
+                Toast.makeText(this, "隐士打开系统浏览器跳转", Toast.LENGTH_LONG).show();
+
+
+                Intent intent3 = new Intent(Intent.ACTION_VIEW);
+                intent3.setData(Uri.parse("https://www.cnblogs.com/"));
+                startActivity(intent3);
                 break;
         }
     }
