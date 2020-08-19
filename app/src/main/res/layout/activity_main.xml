@@ -42,5 +42,15 @@
         android:text="intent隐士  打开浏览器"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button7"
+        android:text="intent隐士  电话"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button8"
+        android:text="intent  跳转传值"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

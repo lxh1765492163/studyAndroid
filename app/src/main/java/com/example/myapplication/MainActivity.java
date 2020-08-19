@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         findViewById(R.id.button4).setOnClickListener(this);
         findViewById(R.id.button5).setOnClickListener(this);
         findViewById(R.id.button6).setOnClickListener(this);
-
+        findViewById(R.id.button7).setOnClickListener(this);
+        findViewById(R.id.button8).setOnClickListener(this);
     }
 
 
@@ -86,6 +87,21 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 intent3.setData(Uri.parse("https://www.cnblogs.com/"));
                 startActivity(intent3);
                 break;
+            case R.id.button7:
+                Toast.makeText(this, "隐士打开电话", Toast.LENGTH_LONG).show();
+
+
+                Intent intent4 = new Intent(Intent.ACTION_DIAL);
+                intent4.setData(Uri.parse("tel:10086"));
+                startActivity(intent4);
+                break;
+            case R.id.button8:
+                Toast.makeText(this, "", Toast.LENGTH_LONG).show();
+
+                Intent intent5 = new Intent(this, Second.class);
+                intent5.putExtra("value", "123456789");
+                startActivity(intent5);
+                break;
         }
     }
 
@@ -94,6 +110,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
 
     /**
      * onCreateOptionsMenu创建的菜单 ， 入口是在标题栏右上角上的三个点
+     * 菜单有待自定义 ！！！！！！！！！！！！！！！！！！！！！！！！！！！
      * @param menu
      * @return
      */
