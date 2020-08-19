@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -22,16 +23,17 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         setContentView(R.layout.activity_main);
 
 
-        Button button = findViewById(R.id.button);
-        Button button1 = findViewById(R.id.button1);
-        Button button2 = findViewById(R.id.button2);
-        Button button3 = findViewById(R.id.button3);
+        findViewById(R.id.button).setOnClickListener(this);
+        findViewById(R.id.button1).setOnClickListener(this);
+        findViewById(R.id.button2).setOnClickListener(this);
+        findViewById(R.id.button3).setOnClickListener(this);
+        findViewById(R.id.button4).setOnClickListener(this);
 
-        button.setOnClickListener(this);
-        button1.setOnClickListener(this);
-        button2.setOnClickListener(this);
-        button3.setOnClickListener(this);
+
+
     }
+
+
 
 
 
@@ -53,7 +55,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 Toast.makeText(this, "销毁activity", Toast.LENGTH_LONG).show();
                 this.finish();
                 break;
-
+            case R.id.button4:
+                Toast.makeText(this, "跳转", Toast.LENGTH_LONG).show();
+                //第一个参数为context  第二个为活动的acivity
+                // Second.class什么意思
+                Intent intent = new Intent(this, Second.class);
+                startActivity(intent);
+                break;
         }
     }
 
