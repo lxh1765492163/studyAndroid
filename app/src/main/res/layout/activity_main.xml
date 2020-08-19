@@ -32,5 +32,10 @@
         android:text="intent显示  跳第二页"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button5"
+        android:text="intent隐士  跳第二页"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

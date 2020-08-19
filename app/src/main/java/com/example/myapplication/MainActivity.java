@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         findViewById(R.id.button2).setOnClickListener(this);
         findViewById(R.id.button3).setOnClickListener(this);
         findViewById(R.id.button4).setOnClickListener(this);
-
+        findViewById(R.id.button5).setOnClickListener(this);
 
 
     }
@@ -56,11 +56,25 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 this.finish();
                 break;
             case R.id.button4:
-                Toast.makeText(this, "跳转", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "显示跳转", Toast.LENGTH_LONG).show();
                 //第一个参数为context  第二个为活动的acivity
                 // Second.class什么意思
                 Intent intent = new Intent(this, Second.class);
                 startActivity(intent);
+                break;
+            case R.id.button5:
+
+                Toast.makeText(this, "隐士跳转", Toast.LENGTH_LONG).show();
+
+                //隐士他跳转需要action 和 category都匹配中才能跳转 ， 否则会报错
+                // 每个Intent只能指定一个action , 但是可以指定多个category
+                Intent intent2 = new Intent("android.intent.action.Second");
+
+                //category 默认 android.intent.category.DEFAULT
+                // Intent指定category
+                intent2.addCategory("android.intent.action.Second");
+
+                startActivity(intent2);
                 break;
         }
     }
