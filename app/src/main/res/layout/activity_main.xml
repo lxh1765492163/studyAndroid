@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <Button
         android:id="@+id/button"
@@ -50,6 +50,11 @@
     <Button
         android:id="@+id/button8"
         android:text="intent  跳转传值"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button9"
+        android:text="intent  返回且传值到首页"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

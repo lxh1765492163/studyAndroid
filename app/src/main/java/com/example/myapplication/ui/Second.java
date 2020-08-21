@@ -1,9 +1,11 @@
-package com.example.myapplication;
+package com.example.myapplication.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.myapplication.R;
 
 public class Second extends AppCompatActivity {
     @Override
