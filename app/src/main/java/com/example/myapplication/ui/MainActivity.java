@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         findViewById(R.id.button7).setOnClickListener(this);
         findViewById(R.id.button8).setOnClickListener(this);
         findViewById(R.id.button9).setOnClickListener(this);
+        findViewById(R.id.button10).setOnClickListener(this);
     }
 
 
@@ -107,6 +108,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
                 Intent intent6 = new Intent(this, Three.class);
                 startActivityForResult(intent6, 1);
+
+                break;
+            case R.id.button10:
+                Toast.makeText(this, "生命周期", Toast.LENGTH_LONG).show();
+
+                Intent intent7 = new Intent(this, LifeActivity.class);
+                startActivity(intent7);
 
                 break;
         }

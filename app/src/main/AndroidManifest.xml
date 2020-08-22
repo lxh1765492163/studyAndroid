@@ -23,6 +23,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.Three" ></activity>
+        <activity android:name=".ui.LifeActivity" ></activity>
+        <activity android:name=".ui.Life3Activity" ></activity>
+        <activity
+            android:theme="@style/Theme.AppCompat.Dialog"
+            android:name=".ui.Life2Activity" ></activity>
     </application>
 
 </manifest>

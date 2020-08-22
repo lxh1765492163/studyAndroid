@@ -57,5 +57,10 @@
         android:text="intent  返回且传值到首页"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/button10"
+        android:text="测试生命周期"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
