@@ -14,11 +14,8 @@ import android.widget.Toast;
 import com.example.myapplication.R;
 import com.example.myapplication.model.TestBean;
 
-import java.io.Serializable;
-
-
 //MainActivity实现接口OnClickListener ， MainActivity实例就是OnClickListener实例的意思
-public class MainActivity extends AppCompatActivity implements OnClickListener {
+public class MainActivity extends BaseActivity implements OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

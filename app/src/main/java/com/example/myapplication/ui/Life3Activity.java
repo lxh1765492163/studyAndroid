@@ -2,11 +2,9 @@ package com.example.myapplication.ui;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.myapplication.R;
 
-public class Life3Activity extends AppCompatActivity {
+public class Life3Activity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
