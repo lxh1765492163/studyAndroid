@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +16,14 @@ public class LifeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.life);
+
+        //提示因为回收activity 时候保存的数据
+        if(savedInstanceState!=null){
+            String bundle = savedInstanceState.getString("key");
+            Toast.makeText(this, bundle, Toast.LENGTH_LONG).show();
+        }
+
+
 
         Log.i(TAG, "life1 onCreate called.");
         Button button  = findViewById(R.id.button);
@@ -34,6 +43,24 @@ public class LifeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button button2  = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LifeActivity.this, Life3Activity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
+    @Override
+    public void onSaveInstanceState(Bundle bundle){
+        super.onSaveInstanceState(bundle);
+
+        String state = "测试回收activity 前保存数据";
+        bundle.putString("key", state);
     }
 
     String TAG = "title";

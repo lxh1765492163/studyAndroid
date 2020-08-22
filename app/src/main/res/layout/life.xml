@@ -11,13 +11,19 @@
 
     <Button
         android:id = "@+id/button"
-        android:text="跳转"
+        android:text="跳转dialog"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
     <Button
         android:id = "@+id/button1"
-        android:text="跳转"
+        android:text="跳转activity"
         android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id = "@+id/button2"
+        android:text="测试 非栈顶 activity被回收前怎么保存数据 "
+       android:layout_width="match_parent"
         android:layout_height="50dp" />
 </LinearLayout>
