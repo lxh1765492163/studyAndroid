@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <com.example.myapplication.component.Title
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></com.example.myapplication.component.Title>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edit"
+            android:hint="请输入"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:maxLines="3"/>
+
+        <Button
+            android:id="@+id/get_edit"
+            android:text="获取输入值"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="100dp" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:src="@mipmap/aaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <ProgressBar
+        android:id="@+id/loading2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:max="100"
+        android:progress="10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/add_loading"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="增加进度" />
+
+    <Button
+        android:id="@+id/none_loading"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="消失loading" />
+
+    <Button
+        android:id="@+id/button12"
+        android:text="alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:text="文案1" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:text="文案2" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:text="文案3" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <Button
+            android:id="@+id/a"
+            android:text="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+        <Button
+            android:id="@+id/b"
+            android:text="2"
+            android:layout_toLeftOf="@id/a"
+            android:layout_above="@id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/c"
+            android:text="3"
+            android:layout_toRightOf="@id/a"
+            android:layout_above="@id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/d"
+            android:text="4"
+            android:layout_toLeftOf="@id/a"
+            android:layout_below="@id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/e"
+            android:text="5"
+            android:layout_toRightOf="@id/a"
+            android:layout_below="@id/a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/A"
+            android:text="相对a"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="子元素"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/B"
+            android:text="相对b"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="子元素"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+
+</LinearLayout>
+</ScrollView>

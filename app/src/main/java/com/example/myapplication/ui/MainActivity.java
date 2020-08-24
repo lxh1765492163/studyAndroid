@@ -1,7 +1,5 @@
 package com.example.myapplication.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,6 +32,9 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         findViewById(R.id.button8).setOnClickListener(this);
         findViewById(R.id.button9).setOnClickListener(this);
         findViewById(R.id.button10).setOnClickListener(this);
+        findViewById(R.id.button11).setOnClickListener(this);
+        findViewById(R.id.button12).setOnClickListener(this);
+
     }
 
 
@@ -114,6 +115,19 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 startActivity(intent7);
 
                 break;
+            case R.id.button11:
+                Toast.makeText(this, "ui练习", Toast.LENGTH_LONG).show();
+
+                Intent intent8= new Intent(this, UiActivity.class);
+                startActivity(intent8);
+
+                break;
+            case R.id.button12:
+                Intent intent9= new Intent(this, Login.class);
+                startActivity(intent9);
+
+                break;
+
         }
     }
 
