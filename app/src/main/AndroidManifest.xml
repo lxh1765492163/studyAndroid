@@ -23,6 +23,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".ui.Lists"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
+        <activity
+            android:name=".page.Chart"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
+        <activity
             android:name=".ui.Login"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             ></activity>

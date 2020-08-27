@@ -21,6 +21,11 @@ public class TestBean implements Serializable {
                 '}';
     }
 
+    public TestBean(String name, int age) {
+        setName(name);
+        setAge(age);
+    }
+
     public TestBean(String name, int age, String weight) {
         setName(name);
         setAge(age);

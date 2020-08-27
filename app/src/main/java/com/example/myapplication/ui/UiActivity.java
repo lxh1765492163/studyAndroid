@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -11,6 +12,7 @@ import com.example.myapplication.R;
 import com.example.myapplication.component.AlertLog;
 
 import android.view.View.OnClickListener;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -20,6 +22,7 @@ import java.net.URL;
 
 
 public class UiActivity extends BaseActivity implements OnClickListener {
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -34,7 +37,13 @@ public class UiActivity extends BaseActivity implements OnClickListener {
         findViewById(R.id.none_loading).setOnClickListener(this);
         findViewById(R.id.add_loading).setOnClickListener(this);
         findViewById(R.id.button12).setOnClickListener(this);
+
+
     }
+
+
+
+
 
 
     @Override

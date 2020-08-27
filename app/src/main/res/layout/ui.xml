@@ -91,18 +91,21 @@
         android:orientation="vertical">
 
         <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="left"
             android:text="文案1" />
 
         <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
             android:text="文案2" />
 
         <TextView
+            xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="70dp"
             android:layout_height="50dp"
             android:layout_gravity="right"

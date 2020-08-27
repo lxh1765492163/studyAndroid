@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.model.TestBean;
+import com.example.myapplication.page.Chart;
 
 //MainActivity实现接口OnClickListener ， MainActivity实例就是OnClickListener实例的意思
 public class MainActivity extends BaseActivity implements OnClickListener {
@@ -34,6 +35,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         findViewById(R.id.button10).setOnClickListener(this);
         findViewById(R.id.button11).setOnClickListener(this);
         findViewById(R.id.button12).setOnClickListener(this);
+        findViewById(R.id.button13).setOnClickListener(this);
 
     }
 
@@ -125,6 +127,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
             case R.id.button12:
                 Intent intent9= new Intent(this, Login.class);
                 startActivity(intent9);
+
+                break;
+            case R.id.button13:
+                Intent intent10= new Intent(this, Chart.class);
+                startActivity(intent10);
 
                 break;
 
