@@ -36,7 +36,7 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         findViewById(R.id.button11).setOnClickListener(this);
         findViewById(R.id.button12).setOnClickListener(this);
         findViewById(R.id.button13).setOnClickListener(this);
-
+        findViewById(R.id.button14).setOnClickListener(this);
     }
 
 
@@ -134,7 +134,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 startActivity(intent10);
 
                 break;
+            case R.id.button14:
+                Intent intent11= new Intent(this, MyFragment.class);
+                startActivity(intent11);
 
+                break;
         }
     }
 

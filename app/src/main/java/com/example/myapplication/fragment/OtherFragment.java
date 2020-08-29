@@ -9,12 +9,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.myapplication.R;
 
-
-public class LeftFragment extends Fragment {
+public class OtherFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup contain  , Bundle savedInstanceState){
 
-        View view = inflater.inflate(R.layout.leftfragment ,contain, false);
+        View view = inflater.inflate(R.layout.otherfragment ,contain, false);
         return view;
     };
 }

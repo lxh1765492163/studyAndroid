@@ -22,6 +22,11 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.MyFragment"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
         <activity
             android:name=".ui.Lists"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
