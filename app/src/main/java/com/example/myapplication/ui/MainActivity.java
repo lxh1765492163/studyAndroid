@@ -1,20 +1,27 @@
 package com.example.myapplication.ui;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.myapplication.R;
 import com.example.myapplication.model.TestBean;
+import com.example.myapplication.page.Broadcast;
 import com.example.myapplication.page.Chart;
 
 //MainActivity实现接口OnClickListener ， MainActivity实例就是OnClickListener实例的意思
 public class MainActivity extends BaseActivity implements OnClickListener {
+
+    Button b15;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +44,21 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         findViewById(R.id.button12).setOnClickListener(this);
         findViewById(R.id.button13).setOnClickListener(this);
         findViewById(R.id.button14).setOnClickListener(this);
+        b15 = findViewById(R.id.button15);
+        b15.setOnClickListener(this);
+
+        IntentFilter filter = new IntentFilter("11111");
+        registerReceiver(receiver,filter);
     }
 
+    private BroadcastReceiver receiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if(intent.getAction().equals("11111")){
+                b15.setText("我接收了广播");
+            }
+        }
+    };
 
     @Override
     public void onClick(View view) {
@@ -139,6 +159,11 @@ public class MainActivity extends BaseActivity implements OnClickListener {
                 startActivity(intent11);
 
                 break;
+            case R.id.button15:
+                Intent intent12= new Intent(this, Broadcast.class);
+                startActivity(intent12);
+
+                break;
         }
     }
 
@@ -195,4 +220,9 @@ public class MainActivity extends BaseActivity implements OnClickListener {
         return true;
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(receiver);
+    }
 }
